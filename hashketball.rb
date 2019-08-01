@@ -184,13 +184,13 @@ def player_numbers(team_name)
 end
 
 def player_stats(name)
-  player_name.capitalize!
+  name.capitalize!
   if nba_hash[:home][:players].include?(name)
     nba_hash[:home][:players][name][:stats]
   elsif nba_hash[:away][:players].include?(name)
     nba_hash[:away][:players][name][:stats]
   else
-    "No player found."
+    "Nobody found."
   end
 end
 
